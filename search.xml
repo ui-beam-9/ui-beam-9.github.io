@@ -16,12 +16,12 @@
 <h2 id="基础编译"><a href="#基础编译" class="headerlink" title="基础编译"></a>基础编译</h2><p>TIPS：这个编译只能编译出一个能正常使用的固件，很多插件都是没有的，关于自定义插件请看后面的进阶编译。</p>
 <ul>
 <li>首先必须要熟悉整个 Open­Wrt 的编译过程，这会让你非常容易上手并使用 GitHub Ac­tions 进行编译，即使你没有成功过。因为实际上本地编译近 90% 失败的原因是因为网络问题导致的，中国大陆特色，咱也不敢多说。GitHub Ac­tions 服务器由 Mi­crosoft Azure 提供，拥有万兆带宽，可以使编译成功率大大提升</li>
-<li>打开 P3TERX 编译项目，点击页面中的 Use this template （使用这个模版）按钮<br><img src="https://oss.mikutechnology.cn/images/course/Actions-OpenWrt/Use%20this%20template.png"></li>
-<li>填写仓库名称，然后点击Create repository from template（从模版创建储存库）按钮<br><img src="https://oss.mikutechnology.cn/images/course/Actions-OpenWrt/Create%20repository%20from%20template.png"></li>
-<li>经过几秒钟的等待，页面会跳转到新建的仓库，内容和P3TERX的项目是相同的。<br><img src="https://oss.mikutechnology.cn/images/course/Actions-OpenWrt/P3TERX.png"></li>
-<li>点击 Actions 选择 Build OpenWrt，然后点击 Run Workflow 选项，在点击 Run Workflow（运行工作流）按钮即可开始编译<br><img src="https://oss.mikutechnology.cn/images/course/Actions-OpenWrt/Build%20OpenWrt.png"></li>
-<li>在等待编译完成的过程中，你可以进入<a href="https://github.com/P3TERX/Actions-OpenWrt">这个项目</a>点击右上角的star，这是对项目最大的支持。<br><img src="https://oss.mikutechnology.cn/images/course/Actions-OpenWrt/star.png"></li>
-<li>经过几个小时的等待，不出意外你就可以在 Actions 页面看到已经打包好的固件目录压缩包<br><img src="https://oss.mikutechnology.cn/images/course/Actions-OpenWrt/download.png"></li>
+<li>打开 P3TERX 编译项目，点击页面中的 Use this template （使用这个模版）按钮<br><img src="https://cos.ui-beam.com/images/course/Actions-OpenWrt/Use%20this%20template.png"></li>
+<li>填写仓库名称，然后点击Create repository from template（从模版创建储存库）按钮<br><img src="https://cos.ui-beam.com/images/course/Actions-OpenWrt/Create%20repository%20from%20template.png"></li>
+<li>经过几秒钟的等待，页面会跳转到新建的仓库，内容和P3TERX的项目是相同的。<br><img src="https://cos.ui-beam.com/images/course/Actions-OpenWrt/P3TERX.png"></li>
+<li>点击 Actions 选择 Build OpenWrt，然后点击 Run Workflow 选项，在点击 Run Workflow（运行工作流）按钮即可开始编译<br><img src="https://cos.ui-beam.com/images/course/Actions-OpenWrt/Build%20OpenWrt.png"></li>
+<li>在等待编译完成的过程中，你可以进入<a href="https://github.com/P3TERX/Actions-OpenWrt">这个项目</a>点击右上角的star，这是对项目最大的支持。<br><img src="https://cos.ui-beam.com/images/course/Actions-OpenWrt/star.png"></li>
+<li>经过几个小时的等待，不出意外你就可以在 Actions 页面看到已经打包好的固件目录压缩包<br><img src="https://cos.ui-beam.com/images/course/Actions-OpenWrt/download.png"></li>
 </ul>
 <h2 id="进阶编译"><a href="#进阶编译" class="headerlink" title="进阶编译"></a>进阶编译</h2><ul>
 <li>如果你想要编译出更多的固件，可以使用这个方法，这个编译可以编译出多个固件，比如支持更多的插件，比如支持更多的系统，比如支持更多的平台。</li>
@@ -29,18 +29,18 @@
 <li>然后打开虚拟机，右键打开终端，然后输入以下指令更新软件包和安装编译依赖<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update -y</span><br><span class="line">sudo apt full-upgrade -y</span><br><span class="line">sudo apt install -y ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential \</span><br><span class="line">bzip2 ccache cmake cpio curl device-tree-compiler fastjar flex gawk gettext gcc-multilib g++-multilib \</span><br><span class="line">git gperf haveged help2man intltool libc6-dev-i386 libelf-dev libglib2.0-dev libgmp3-dev libltdl-dev \</span><br><span class="line">libmpc-dev libmpfr-dev libncurses5-dev libncursesw5-dev libreadline-dev libssl-dev libtool lrzsz \</span><br><span class="line">mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 python3-pip qemu-utils \</span><br><span class="line">rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev</span><br></pre></td></tr></table></figure></li>
 <li>接下来需要下载源代码，然后进入到源代码目录<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/coolsnowwolf/lede</span><br><span class="line">cd lede</span><br></pre></td></tr></table></figure></li>
 <li>然后将插件库地址添加到配置文件进去，这里我使用的是<a href="https://github.com/kenzok8/openwrt-packages">kenzok8的插件库</a>，打开feeds.conf.default，将插件库地址添加到最后一行并保存<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">src-git kenzo https://github.com/kenzok8/openwrt-packages.git</span><br><span class="line">src-git small https://github.com/kenzok8/small.git</span><br></pre></td></tr></table></figure>
-<img src="https://oss.mikutechnology.cn/images/course/Actions-OpenWrt/add.png"></li>
+<img src="https://cos.ui-beam.com/images/course/Actions-OpenWrt/add.png"></li>
 <li>配置文件修改好之后，输入以下指令更新feeds并安装插件<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./scripts/feeds update -a</span><br><span class="line">./scripts/feeds install -a</span><br></pre></td></tr></table></figure></li>
-<li>然后输入make menuconfig进入编译配置<br><img src="https://oss.mikutechnology.cn/images/course/Actions-OpenWrt/menuconfig.png"></li>
+<li>然后输入make menuconfig进入编译配置<br><img src="https://cos.ui-beam.com/images/course/Actions-OpenWrt/menuconfig.png"></li>
 <li>在这个界面可以设置很多参数，包括平台，插件，系统，编译器等等，我这里就只设置了插件，其他参数没有设置，如果你想设置其他参数，可以自己<a href="https://max.book118.com/html/2021/0405/8133116046003071.shtm">点击这里</a>查看,插件的详细设置可以看<a href="https://www.right.com.cn/forum/thread-3682029-1-1.html">这里</a></li>
-<li>设置好参数之后，点击Save保存退出，然后打开源代码目录下的.config文件，把里面的内容全部复制<br><img src="https://oss.mikutechnology.cn/images/course/Actions-OpenWrt/config.png"></li>
-<li>然后打开刚刚新建的仓库，然后点击 Add file 选择 Create new file（创建新文件），文件名填.Config，把刚刚虚拟机上的.config复制的内容粘贴到里面去<br><img src="https://oss.mikutechnology.cn/images/course/Actions-OpenWrt/Create%20new%20file.png"><br><img src="https://oss.mikutechnology.cn/images/course/Actions-OpenWrt/github_config.png"></li>
-<li>然后再次点击 Actions 选择 Build OpenWrt，然后点击 Run Workflow 选项，在点击 Run Workflow（运行工作流）按钮即可开始编译你的自定义固件，等待几个小时就可以在 Actions 页面看到已经打包好的固件目录压缩包<br><img src="https://oss.mikutechnology.cn/images/course/Actions-OpenWrt/Build%20OpenWrt.png"><br><img src="https://oss.mikutechnology.cn/images/course/Actions-OpenWrt/download.png"></li>
+<li>设置好参数之后，点击Save保存退出，然后打开源代码目录下的.config文件，把里面的内容全部复制<br><img src="https://cos.ui-beam.com/images/course/Actions-OpenWrt/config.png"></li>
+<li>然后打开刚刚新建的仓库，然后点击 Add file 选择 Create new file（创建新文件），文件名填.Config，把刚刚虚拟机上的.config复制的内容粘贴到里面去<br><img src="https://cos.ui-beam.com/images/course/Actions-OpenWrt/Create%20new%20file.png"><br><img src="https://cos.ui-beam.com/images/course/Actions-OpenWrt/github_config.png"></li>
+<li>然后再次点击 Actions 选择 Build OpenWrt，然后点击 Run Workflow 选项，在点击 Run Workflow（运行工作流）按钮即可开始编译你的自定义固件，等待几个小时就可以在 Actions 页面看到已经打包好的固件目录压缩包<br><img src="https://cos.ui-beam.com/images/course/Actions-OpenWrt/Build%20OpenWrt.png"><br><img src="https://cos.ui-beam.com/images/course/Actions-OpenWrt/download.png"></li>
 <li>更多进阶方法在<a href="https://p3terx.com/archives/build-openwrt-with-github-actions.html#toc_6">p3terx博客</a>查看，这里就不在赘述了</li>
 </ul>
 ]]></content>
       <categories>
-        <category>教程</category>
+        <category>openwrt</category>
       </categories>
   </entry>
   <entry>
