@@ -44,9 +44,9 @@
       </categories>
   </entry>
   <entry>
-    <title>只需一个github账号从0到1使用hexo博客框架和Butterfly主题搭建一个属于自己的博客(不要云服务器)</title>
+    <title>只需一个github账号从0到1使用hexo博客框架和Butterfly主题搭建一个属于自己的博客 (无需云服务器)</title>
     <url>/2024/06/26/49438d879a13/</url>
-    <content><![CDATA[<h2 id="只需一个github账号从0到1使用hexo博客框架和Butterfly主题搭建一个属于自己的博客-不要云服务器"><a href="#只需一个github账号从0到1使用hexo博客框架和Butterfly主题搭建一个属于自己的博客-不要云服务器" class="headerlink" title="只需一个github账号从0到1使用hexo博客框架和Butterfly主题搭建一个属于自己的博客(不要云服务器)"></a>只需一个github账号从0到1使用hexo博客框架和Butterfly主题搭建一个属于自己的博客(不要云服务器)</h2><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
+    <content><![CDATA[<h2 id="只需一个github账号从0到1使用hexo博客框架和Butterfly主题搭建一个属于自己的博客-无需云服务器"><a href="#只需一个github账号从0到1使用hexo博客框架和Butterfly主题搭建一个属于自己的博客-无需云服务器" class="headerlink" title="只需一个github账号从0到1使用hexo博客框架和Butterfly主题搭建一个属于自己的博客 (无需云服务器)"></a>只需一个github账号从0到1使用hexo博客框架和Butterfly主题搭建一个属于自己的博客 (无需云服务器)</h2><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><ul>
 <li>最近在网上经常刷到各种博客和个人主页，看着就挺手痒的，突然想起来以前大学的时候也做了一个博客，不过后来因为上班之后就没时间去更新和维护了，直到现在也只是个半成品，最近公司假期放得比较多，想着要不就重新搭建一个新的博客吧，正好也能写一篇文章（水一篇文章）</li>
 </ul>
 <h2 id="什么是hexo"><a href="#什么是hexo" class="headerlink" title="什么是hexo"></a>什么是hexo</h2><ul>
@@ -144,7 +144,22 @@
 <li>接下来依次执行以下指令，也可以使用之前修改package.json的方法，直接一次性执行，这里我就是直接把下面的指令都放到package.json里面了，如果和我的一样的话，那直接输入npm run deploy就可以了<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 <img src="https://cos.ui-beam.com/images/blog/article/hexo-theme-butterfly/package.json-deploy.png" alt="package.json-deploy"></li>
 </ul>
-<h2 id="查看效果"><a href="#查看效果" class="headerlink" title="查看效果"></a>查看效果</h2><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2>]]></content>
+<h2 id="查看效果"><a href="#查看效果" class="headerlink" title="查看效果"></a>查看效果</h2><ul>
+<li>到这一步可能很多人会出现GitHub无法连接的情况，这是正常的，一般情况下多试几次就好了，，当跑码完成之后，回到刚刚创建的仓库，就能看到博客源码了，此时在浏览器地址输入：你的GitHub用户名.github.io，就能看到博客已经正常运行了<ul>
+<li>例如：我的用户名是ui-beam-9，那么我的博客地址就是 ui-beam-9.github.io<br><img src="https://cos.ui-beam.com/images/blog/article/hexo-theme-butterfly/hexo-deploy-ok.png" alt="hexo-deploy-ok"><br><img src="https://cos.ui-beam.com/images/blog/article/hexo-theme-butterfly/github-repository-ok.png" alt="github-repository-ok"><br><img src="https://cos.ui-beam.com/images/blog/article/hexo-theme-butterfly/ui-beam-9.github.io.png" alt="ui-beam-9.github.io"></li>
+</ul>
+</li>
+</ul>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><ul>
+<li>到这里博客已经搭建并部署完成了<br> 现在你的博客网站的地址是 xxx.github.io，如果觉得这个网址不够好的话，可以设置个人域名了，但是需要花钱<ul>
+<li>其实现在域名也很便宜，有条件的还是买一个域名吧，当然如果只是白嫖的话，这个网站也已经够用了，毕竟也不用买云服务器，可以省下一笔钱）<div class="note info simple"><p>之前因为一时心血来潮就做了这个博客，但是后面因为进入社会之后，一直没时间维护，更不用说去更新文章了，这次因为工作已经稳定下来，也有时间维护了，后面会持续更新的，不会像现在这样，时隔两年才更新了两篇文章（咕咕咕）</p>
+</div>
+<div class="note default simple"><p>下期预告：基于 Cloudflare Workers 搭建一个专属的Docker镜像站以及拉取代理</p>
+</div></li>
+</ul>
+</li>
+</ul>
+]]></content>
       <categories>
         <category>Butterfly教程</category>
       </categories>
