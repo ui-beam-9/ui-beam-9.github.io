@@ -150,6 +150,9 @@
 </ul>
 </li>
 </ul>
+<h2 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢</h2><div class="note info simple"><p>本篇文章所有资料来源均来源于hexo和Butterfly官方，感谢这些开发者做出的贡献</p>
+</div>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://hexo.io/zh-cn/docs</span><br><span class="line">https://butterfly.js.org</span><br></pre></td></tr></table></figure>
 <h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><ul>
 <li>到这里博客已经搭建并部署完成了<br> 现在你的博客网站的地址是 xxx.github.io，如果觉得这个网址不够好的话，可以设置个人域名了，但是需要花钱<ul>
 <li>其实现在域名也很便宜，有条件的还是买一个域名吧，当然如果只是白嫖的话，这个网站也已经够用了，毕竟也不用买云服务器，可以省下一笔钱）<div class="note info simple"><p>之前因为一时心血来潮就做了这个博客，但是后面因为进入社会之后，一直没时间维护，更不用说去更新文章了，这次因为工作已经稳定下来，也有时间维护了，后面会持续更新的，不会像现在这样，时隔两年才更新了两篇文章（咕咕咕）</p>
