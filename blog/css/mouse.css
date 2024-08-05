@@ -1,0 +1,9 @@
+body {
+    cursor: url(https://ui-beam-1319942039.cos.ap-chengdu.myqcloud.com/other/mp/default.cur),
+        default;
+}
+a,
+img {
+    cursor: url(https://ui-beam-1319942039.cos.ap-chengdu.myqcloud.com/other/mp/pointer.cur),
+        default;
+}
